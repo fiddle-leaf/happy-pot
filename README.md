@@ -1,10 +1,10 @@
-# MERN Skeleton
+# Happy Pot Planner
 
-User-authentication MERN-stack App skeleton
+Digital planner saves your plants details and watering schedule.
 
 ## Technologies Used
 
-- React.js, Express, MongoDB
+- React.js, Express, MongoDB, SASS
 
 ## Deployment
 
