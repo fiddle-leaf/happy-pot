@@ -1,0 +1,229 @@
+@use 'defaults' as *
+@use 'layout'
+
+body 
+    background: rgb(255,255,255)
+    background: linear-gradient(0deg, rgba(254,242,255,1) 10%, rgba(244,178,255,1) 40%, rgba(61,44,157,1) 75%)
+    margin: 0
+    color: $primary
+    font:
+        size: 12px
+        family: $text
+        weight: 400
+        optical-sizing: auto
+        style: normal
+
+    *
+        +reset-list
+
+    a
+        font-weight: 600
+        +underline($size: 2px, $color: $accent-2)
+        text-underline-offset: 2px
+
+    a
+        color: $accent-3
+
+    a:hover
+        color: #16171f //indigo-90
+
+    img
+        width: 100%
+        height: auto
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .foo
+       font-family: $titles 
+
+    h1
+        color: $accent-4
+        text-shadow: -1px -1px 0.5px $accent, 1px 1px 0.5px $accent
+        letter-spacing: -(calc($cushion*0.30))
+        font:
+            size: 4rem
+            weight: 900
+
+    h2
+        letter-spacing: -(calc($cushion*0.05))
+        text:
+            transform: lowercase
+            shadow:  -1px -1px $accent-2, 1px 1px $accent
+        font:
+            size: 2rem
+            weight: 700
+
+    h3
+        letter-spacing: -(calc($cushion*0.025))
+        font:
+            size: 1.2rem
+            weight: 600
+
+    h4
+        font:
+            family: $text
+            size: $cushion
+            weight: 500
+    
+    h5
+        text-transform: uppercase
+        font:
+            size: calc($cushion*0.9)
+            weight: 700
+
+    strong, 
+    bold
+        font-weight: 800
+
+div.page
+    background: url('https://i.imgur.com/fdxdyuh.png') repeat
+    background-size: 2px
+
+    .head
+        padding-block-start: $cushion
+
+#intro
+    background: $secondary
+    border-radius: 0px 10px 10px 10px
+    box-shadow: 2px 2px $accent-2
+    border: 1px solid $accent-2
+
+main.content
+    
+    article
+        background: $primary
+        border-radius: 5px
+        border: 0.1rem solid $primary
+        box-shadow: 1px 1px 0.5rem -0.25rem $accent-3
+
+        
+
+#titles
+    color: $secondary
+    padding: $bit $cushion
+    background: $primary
+    border-radius: 5px 5px 0 0
+    box-shadow: -1px -1px 5px -2px $accent-3, 0 1px 1px -1px $accent-3
+
+#entries
+    border-radius: 0 0 5px 5px
+    padding: $cushion
+    background: $accent-4
+    
+
+.projects
+    card      
+        h3
+            border-radius: 2px 2px 0 0
+            background: $accent
+            padding: (calc($cushion/4)) $bit
+            border-bottom: 1px dotted $accent-3
+
+        p
+            
+            background: $secondary
+            padding: $bit
+            font:
+                size: 0.9rem
+                weight: 500
+
+.post
+    border: 1px groove $primary
+    box-shadow: 2px 2px 1px -2px $primary
+ 
+
+.blog
+    
+    
+
+    .text
+        background: $secondary
+        border-radius: 2px
+        padding: $bit
+        h4
+            text-decoration: 2px underline $accent
+            text-underline-offset: 2px
+
+        p, ul
+            padding-block: $bit
+
+        ul
+            padding-inline-start: $cushion
+            line-height: 125%
+        
+        h3
+            font:
+                family: $text
+                weight: 700
+
+    [data="time"]
+        border-top: 1px dotted $accent-3
+        background: $primary
+        
+        time
+            font: 
+                family: $titles
+                size: (calc($cushion*0.6))
+                weight: 700
+            border-left: 1px solid $accent-3
+            text-transform: uppercase
+            letter-spacing: 1px
+            padding: 2px 5px
+            background: $accent
+            color: $accent-3
+
+.photo
+    @extend .post
+    background: $accent
+    padding: 3px
+
+    
+
+.links>li
+    list-style: none
+    text-align: center
+    font:
+        size: 1.2rem
+        family: $titles
+        weight: 800
+
+    a
+        color: $secondary
+        +underline($size: $bit, $color: $accent-2)
+
+    a:hover
+        transition: text-decoration 500ms 200ms
+        text-decoration: $bit underline $accent 
+
+.foo
+    padding: $bit
+    
+
+    footer
+        padding-block-start: $bit
+
+.credits
+    transition: font-size 1s
+    padding: $bit
+    font:
+        size: calc( $cushion*0.7 )
+        weight: 500
+
+    ul
+        padding-block-start: $bit
+
+    li
+        margin-inline-start: $cushion
+
+
+#copyright
+    text-transform: uppercase
+    color: $accent-3
+    font:
+        weight: 700
+        size: calc($cushion*0.6)
+
