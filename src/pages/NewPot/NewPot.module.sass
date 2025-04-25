@@ -1,3 +1,12 @@
+@use '../../sass/_defaults' as *
+
 article.new_pot
+    article
+        +grid($flow: column, $wrap: nowrap)
+        padding-inline: $cushion
+
     form
-        background: red
+        +grid($flow: row, $wrap: wrap, $gap: $cushion)
+
+    span
+        +grid($flow: row, $wrap: nowrap, $gap: $bit)

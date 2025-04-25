@@ -1,25 +1,16 @@
+import { getPlants } from "../features/plants";
+
 export default function NewPotForm() {
+  //const plants = getPlants("s");
   return (
-    <div>
+    <article>
       <form>
         <span>
-          <label for="plant_name">Plant Name:</label>
+          <label htmlFor="plant_name">Plant Name:</label>
           <input type="text" name="plant_name" required />
         </span>
         <span>
-          <label for="plants">Choose Plant Type:</label>
-          <select name="plants" id="plants"></select>
-        </span>
-        <span>
-          <label for="gotcha_day">Gotcha Day:</label>
-          <input type="date" />
-        </span>
-        <span>
-          <label for="last_watered">Last Watered:</label>
-          <input type="date" />
-        </span>
-        <span>
-          <label for="pot_type">Choose Pot Type:</label>
+          <label htmlFor="pot_type">Choose Pot Type:</label>
           <select name="pot_type" id="pot_tyoe">
             <option value="plastic" key="0">
               plastic
@@ -36,9 +27,25 @@ export default function NewPotForm() {
           </select>
         </span>
         <span>
+          <label htmlFor="gotcha_day">Gotcha Day:</label>
+          <input type="date" />
+        </span>
+        <span>
+          <label htmlFor="last_watered">Last Watered:</label>
+          <input type="date" />
+        </span>
+
+        <search>
+          <span>
+            <label htmlFor="plant_type">Search Plant Type:</label>
+            <input type="search" placeholder="Monstera" />
+            <button type="button">search</button>
+          </span>
+        </search>
+        <span>
           <input type="submit" value="Submit" />
         </span>
       </form>
-    </div>
+    </article>
   );
 }
